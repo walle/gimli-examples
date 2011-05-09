@@ -1,0 +1,12 @@
+table
+{
+  border: 1px solid #4a4a4a;
+}
+
+td, th
+{
+  padding: 12px;
+  border-bottom: 1px dashed #acacac;
+  border-right: 1px dashed #acacac;
+}
+
