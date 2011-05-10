@@ -6,11 +6,9 @@ The markup files is stored in the root folder and the pdf output is saved in bui
 I use "guard-gimli":https://github.com/walle/guard-gimli to build the files when changed.
 The default guardfile is used but modified to output to build, see the Guardfile
 
-```ruby
-guard 'gimli', :outputdir => 'build' do
+bc. guard 'gimli', :outputdir => 'build' do
   watch(%r{.+\.(md|mkdn?|mdown|markdown|textile|rdoc|org|creole|re?st(\.txt)?|asciidoc|pod|\d|(media)?wiki)})
 end
-```
 
 h2. Styles
 
