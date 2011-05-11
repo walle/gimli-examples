@@ -7,7 +7,7 @@ I use "guard-gimli":https://github.com/walle/guard-gimli to build the files when
 The default guardfile is used but modified to output to build, see the Guardfile
 
 bc. guard 'gimli', :outputdir => 'build' do
-  watch(%r{.+\.(md|mkdn?|mdown|markdown|textile|rdoc|org|creole|re?st(\.txt)?|asciidoc|pod|\d|(media)?wiki)})
+  watch(%r{.+\.(md|mkdn?|mdown|markdown|textile|creole|(media)?wiki)})
 end
 
 h2. Styles
@@ -16,4 +16,10 @@ I have a custom stylesheet the orgmode example to define the table style.
 To build the orgmode example use
 
 bc. $ gimli -f table.org -o build -s table.css
+
+You can also add a stylesheet to the guard like this
+
+bc. guard 'gimli', :outputdir => 'build', :stylesheet => 'table.css' do
+  watch(%r{.+\.(org)})
+end
 
